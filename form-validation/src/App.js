@@ -19,6 +19,7 @@ function App() {
       name: "username",
       type: "text",
       placeholder: " Username",
+      errorMessage: "",
       label: "Username",
     },
     {
@@ -26,6 +27,7 @@ function App() {
       name: "email",
       type: "text",
       placeholder: " Email",
+      errorMessage: "",
       label: "Email",
     },
     {
@@ -33,6 +35,7 @@ function App() {
       name: "birthday",
       type: "text",
       placeholder: " birthday",
+      errorMessage: "",
       label: "birthday",
     },
     {
@@ -40,6 +43,7 @@ function App() {
       name: "password",
       type: "text",
       placeholder: " password",
+      errorMessage: "",
       label: "password",
     },
     {
@@ -47,6 +51,7 @@ function App() {
       name: "confirmPassword",
       type: "text",
       placeholder: " confirmPassword",
+      errorMessage: "",
       label: "confirmPassword",
     },
   ];
@@ -64,6 +69,7 @@ function App() {
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
+        <h1>Register</h1>
         {inputs.map((input) => (
           <FormInput
             key={input.id}
