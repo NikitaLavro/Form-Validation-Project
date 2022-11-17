@@ -3,9 +3,11 @@ import React from "react";
 import "./formInput.css";
 
 const FormInput = (props) => {
+  const { label, handleChange, id, ...inputProps } = props;
   return (
     <div className="formInput">
-      <input name={props.name} placeholder={props.placeholder} type="text" />
+      <label htmlFor="">{label}</label>
+      <input {...inputProps} onChange={handleChange} />
     </div>
   );
 };
