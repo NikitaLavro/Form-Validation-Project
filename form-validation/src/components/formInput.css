@@ -15,3 +15,22 @@ label {
   font-size: 15px;
   color: grey;
 }
+
+span {
+  font-size: 13px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+input:focus[focused="true"] {
+  border: none;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
